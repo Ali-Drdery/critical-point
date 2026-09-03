@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bv5ytjpxkygq4"]
+
+[ext_resource type="Script" uid="uid://b28u5hyupjypx" path="res://player.gd" id="1_4flbx"]
+
+[node name="Player" type="CharacterBody2D" unique_id=391737819]
+position = Vector2(433, 366)
+scale = Vector2(0.6428634, 1)
+script = ExtResource("1_4flbx")

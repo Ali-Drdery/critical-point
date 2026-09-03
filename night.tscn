@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dq0px6wjobjk7"]
+
+[ext_resource type="Script" uid="uid://dyxplwd4shrmc" path="res://night.gd" id="1_mol8p"]
+
+[node name="Night" type="Node2D" unique_id=1151134066]
+script = ExtResource("1_mol8p")
+
+[node name="StageLabel" type="Label" parent="." unique_id=1952344725]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1380437917]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="WillpowerBar" type="ProgressBar" parent="." unique_id=792590576]
+offset_right = 4.0
+offset_bottom = 27.0

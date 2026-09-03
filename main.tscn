@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b5gjesmoen70s"]
+
+[ext_resource type="Script" uid="uid://b6a804js6vc0c" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bv5ytjpxkygq4" path="res://player.tscn" id="1_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aeucx"]
+size = Vector2(4105, 316)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjmjf"]
+size = Vector2(67, 204)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppsh2"]
+size = Vector2(58, 917)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcd5m"]
+size = Vector2(48, 904)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hl5h0"]
+size = Vector2(2968, 53)
+
+[node name="Main" type="Node2D" unique_id=53223256]
+script = ExtResource("1_0xm2m")
+metadata/_edit_vertical_guides_ = [-1004.0]
+metadata/_edit_horizontal_guides_ = [-390.0]
+
+[node name="Player" parent="." unique_id=391737819 instance=ExtResource("1_ig7tw")]
+position = Vector2(-883, 435)
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=641718860]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=714571566]
+position = Vector2(368, 693)
+shape = SubResource("RectangleShape2D_aeucx")
+
+[node name="DoorTrigger" type="Area2D" parent="." unique_id=29511835]
+position = Vector2(1841, 495)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTrigger" unique_id=1422097298]
+position = Vector2(-140, -432)
+shape = SubResource("RectangleShape2D_sjmjf")
+
+[node name="Wallleft" type="StaticBody2D" parent="." unique_id=2011170315]
+position = Vector2(-959, 294)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wallleft" unique_id=2129784789]
+position = Vector2(-9, -218.5)
+shape = SubResource("RectangleShape2D_ppsh2")
+
+[node name="Wallright" type="StaticBody2D" parent="." unique_id=1152231668]
+position = Vector2(2031, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wallright" unique_id=1766947536]
+position = Vector2(-29, 65)
+shape = SubResource("RectangleShape2D_dcd5m")
+
+[node name="Ceiling" type="StaticBody2D" parent="." unique_id=965885809]
+position = Vector2(306, -288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling" unique_id=179157235]
+position = Vector2(223, -67.5)
+shape = SubResource("RectangleShape2D_hl5h0")
+
+[connection signal="body_entered" from="DoorTrigger" to="." method="_on_door_trigger_body_entered"]
