@@ -1,4 +1,5 @@
 # Critical Point
+![Main Menu](screenshots/menu-screenshot.png)
 
 A 2D narrative game built in **Godot 4.7.1** for a 4-day game jam.
 
